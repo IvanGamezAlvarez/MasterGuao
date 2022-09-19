@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
+
 public class PlayerScripts : MonoBehaviour
 {
+    
+    [System.Serializable]
     public struct PlayerData
     {
+
         public float speed, speedRotation;
+
         public bool isPlaying2D;
     }
     [Header("Reeferencias")]
