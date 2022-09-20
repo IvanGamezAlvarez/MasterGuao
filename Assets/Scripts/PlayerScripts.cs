@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
-    
+    #region variables
     [System.Serializable]
     public struct PlayerData
     {
@@ -19,7 +19,9 @@ public class PlayerScripts : MonoBehaviour
     [Header("Reeferencias")]
     public Rigidbody rb;
     public PlayerData playerData;
-    
+    #endregion
+
+    #region Event Function
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,6 +35,9 @@ public class PlayerScripts : MonoBehaviour
     {
         PlayerController();
     }
+    #endregion
+
+    #region Player Function
     void PlayerController()
     {
         if (playerData.isPlaying2D == false)
@@ -50,4 +55,5 @@ public class PlayerScripts : MonoBehaviour
         }
       
     }
+    #endregion
 }
