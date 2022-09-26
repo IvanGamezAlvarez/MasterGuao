@@ -27,7 +27,6 @@ public class DetectorPlayer : ObjetoInteractuable
         if (other.CompareTag("Player"))
         {
             
-            Debug.Log("Holas");
             outlineRef.enabled = true;
             Instrucciones.SetActive(true);
             

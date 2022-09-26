@@ -23,6 +23,15 @@ public class ObjetoInteractuable : MonoBehaviour
             ventana2D.SetActive(false);
         }
     }
+    public void AgarrarObjeto(GameObject Objeto)
+    {
+
+        if (Input.GetKey(KeyCode.E))
+        {
+           Objeto.SetActive(true);
+
+        }
+    }
 
 
 

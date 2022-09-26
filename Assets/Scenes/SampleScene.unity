@@ -1690,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1311275870
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,6 +1757,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  playerData:
+    speed: 400
+    speedRotation: 400
+    isPlaying2D: 0
+  time: 0
+  calor: 0
+  Suciedad: {fileID: 0}
 --- !u!54 &1515719835
 Rigidbody:
   m_ObjectHideFlags: 0
