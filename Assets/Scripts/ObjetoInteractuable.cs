@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class ObjetoInteractuable : MonoBehaviour
 {
-   
-   public void ActivarVentana(GameObject ventana2D)
+    public GameObject playerReference;
+
+    public void Awake()
+    {
+        playerReference = GameObject.Find("Player");
+    }
+    public void ActivarVentana(GameObject ventana2D)
     {
         
         if (Input.GetKey(KeyCode.E))
         {
             ventana2D.SetActive(true);
+            playerReference.GetComponent<PlayerScripts>().onHud = true;
             
         }
     }

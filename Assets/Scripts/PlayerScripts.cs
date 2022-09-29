@@ -20,6 +20,9 @@ public class PlayerScripts : MonoBehaviour
     public float time;
     public float calor;
     public GameObject Suciedad;
+    public bool onHud;
+    [Header("UI and Animations")]
+    public GameObject PauseMenu;
     #endregion
 
     #region Event Function
@@ -33,12 +36,15 @@ public class PlayerScripts : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(playerData.isPlaying2D);
-
+        PausasYSalirDelMenu();
     }
     void FixedUpdate()
     {
-        PlayerController();
+        if(!onHud)
+        {
+            PlayerController();
+        }
+    
     }
     #endregion
 
@@ -68,6 +74,20 @@ public class PlayerScripts : MonoBehaviour
         {
 
         }
+    public void DesableHud()
+    {
+        onHud = false;
+       
+    }
+    public void PausasYSalirDelMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+          
+            
+        }
+    }
+
 
     #endregion
 }
