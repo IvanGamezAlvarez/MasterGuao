@@ -55,7 +55,7 @@ public class PlayerScripts : MonoBehaviour
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
-            Vector3 movementDirection = new Vector3(horizontalInput, rb.velocity.y, verticalInput);
+            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
             // movementDirection.Normalize();
             rb.velocity = movementDirection * playerData.speed * Time.deltaTime;
             if (movementDirection != Vector3.zero)

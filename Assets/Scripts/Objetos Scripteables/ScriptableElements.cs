@@ -6,5 +6,5 @@ using UnityEngine;
 public class ScriptableElements : ScriptableObject
 {
     public bool tieneElVegetalCorrecta;
-    public string vegetalesAceptados;
+    public string  vegetalesAceptados;
 }
