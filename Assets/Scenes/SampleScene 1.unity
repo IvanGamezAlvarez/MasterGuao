@@ -794,9 +794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975a7473f093cfe4ca5667d4a0aaf9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerReference: {fileID: 0}
   outlineRef: {fileID: 0}
-  Instrucciones: {fileID: 197292657}
   ventana2D: {fileID: 0}
+  ActivarasVentana: 0
 --- !u!114 &664088435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,9 +1577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975a7473f093cfe4ca5667d4a0aaf9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerReference: {fileID: 0}
   outlineRef: {fileID: 0}
-  Instrucciones: {fileID: 1944733727}
   ventana2D: {fileID: 0}
+  ActivarasVentana: 0
 --- !u!1 &1015216341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,6 +1831,8 @@ MonoBehaviour:
   time: 0
   calor: 0
   Suciedad: {fileID: 0}
+  onHud: 0
+  PauseMenu: {fileID: 0}
 --- !u!54 &1515719835
 Rigidbody:
   m_ObjectHideFlags: 0
