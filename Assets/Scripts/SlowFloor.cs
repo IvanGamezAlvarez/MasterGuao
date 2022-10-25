@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlowFloor : MonoBehaviour
 {
-    public GameObject playerRef;
+    public GameObject playerRef, trapeador;
     public float slowSpeed;
         private void Start()
     {
@@ -14,6 +14,8 @@ public class SlowFloor : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            trapeador = GameObject.FindGameObjectWithTag("Cleaner");
+
             playerRef.GetComponent<PlayerScripts>().playerData.speed /= slowSpeed;
         }
     }
@@ -21,6 +23,14 @@ public class SlowFloor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            playerRef.GetComponent<PlayerScripts>().playerData.speed *= slowSpeed;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (trapeador.activeSelf == true && Input.GetKey(KeyCode.E))
+        {
+            gameObject.SetActive(false);
             playerRef.GetComponent<PlayerScripts>().playerData.speed *= slowSpeed;
         }
     }

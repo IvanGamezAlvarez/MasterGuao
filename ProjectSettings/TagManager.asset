@@ -7,6 +7,7 @@ TagManager:
   - 2DView
   - Burn
   - Cooked
+  - Cleaner
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ public class Pasivos : ObjetoInteractuable
     public MeshRenderer colorDelAlimento;
     public float tiempoDeCocinado, tiempoDeQuemado;
     public bool seCocino, seQuemo;
+    public bool presionando;
     private void Update()
     {
         if(SeEntrego)
@@ -20,23 +21,29 @@ public class Pasivos : ObjetoInteractuable
             timer += Time.deltaTime;
             Cocinando();
         }
+        else
+        {
+            RestaurarParametros();
+        }
+        _Inputs();
+        
     }
     private void OnTriggerStay(Collider other)
     {
-
-        if (cocinaScriptable.vegetalesAceptados == playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.name && playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.activeSelf == true && Input.GetKey(KeyCode.E) && playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.tag == "Untagged")
+        //se entrego
+        if (cocinaScriptable.vegetalesAceptados == playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.name && playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.activeSelf == true && presionando && playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.tag == "Untagged")
         {
-            Debug.Log("U did it");
             playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.SetActive(false);
             contenido.SetActive(true);
             SeEntrego = true;
-
-           
+            Debug.Log("semetio");
+            presionando = false;
         }
+        //no tienes el objeto
         else
         {
 
-            if (Input.GetKey(KeyCode.E) && SeEntrego == false )
+            if (presionando && SeEntrego == false )
             {
                 textoDeAviso.text = "No puedes acceder te hace falta: " + cocinaScriptable.vegetalesAceptados + ".";
                 ventanDeAviso.SetActive(true);
@@ -44,7 +51,8 @@ public class Pasivos : ObjetoInteractuable
 
             }
         }
-        if (SeEntrego && Input.GetKey(KeyCode.E) && timer > 1 )
+        // recoger
+        if (SeEntrego && presionando  )
         {
 
             playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.SetActive(true);
@@ -59,8 +67,15 @@ public class Pasivos : ObjetoInteractuable
                 playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.tag = "Burn";
                 colorDelAlimento.material.color = Color.white;
             }
-          //  SeEntrego = false;
-            timer = 0;
+            else
+            {
+                timer = 0;
+
+            }
+            Debug.Log("Se saco");
+            SeEntrego = false;
+            presionando = false;
+            //  SeEntrego = false;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -73,7 +88,7 @@ public class Pasivos : ObjetoInteractuable
         
         if (timer > tiempoDeCocinado && timer < tiempoDeQuemado)
         {
-            Debug.Log("Se Cocino");
+           // Debug.Log("Se Cocino");
             colorDelAlimento.material.color = Color.red;
             colorDeObjetoPlayer.material.color = Color.red;
             seCocino = true; 
@@ -83,7 +98,7 @@ public class Pasivos : ObjetoInteractuable
         if (timer > tiempoDeQuemado)
         {
             
-                Debug.Log("Se Quemo");
+         //       Debug.Log("Se Quemo");
                 colorDelAlimento.material.color = Color.black;
                 colorDeObjetoPlayer.material.color = Color.black;
                 seQuemo = true;
@@ -91,6 +106,23 @@ public class Pasivos : ObjetoInteractuable
 
 
 
+        }
+    }
+    public void RestaurarParametros()
+    {
+        timer = 0;
+    }
+    public void _Inputs()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            presionando = true;
+            Debug.Log("presionando");
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            presionando = false;
+            Debug.Log("despresionando");
         }
     }
 }
