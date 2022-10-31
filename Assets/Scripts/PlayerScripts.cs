@@ -55,9 +55,9 @@ public class PlayerScripts : MonoBehaviour
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
-            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+            Vector3 movementDirection = new Vector3(horizontalInput * playerData.speed * Time.deltaTime, rb.velocity.y, verticalInput * playerData.speed * Time.deltaTime);
             // movementDirection.Normalize();
-            rb.velocity = movementDirection * playerData.speed * Time.deltaTime;
+            rb.velocity = movementDirection;
             if (movementDirection != Vector3.zero)
             {
                 Quaternion toRotarion = Quaternion.LookRotation(movementDirection, Vector3.up);

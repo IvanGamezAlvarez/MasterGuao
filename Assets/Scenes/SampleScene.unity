@@ -1167,6 +1167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   cocinaScriptable: {fileID: 11400000, guid: 71dbede00b6017749b6eec9b34a131a9, type: 2}
   contenido: {fileID: 762184377}
   textoDeAviso: {fileID: 1645520334}
@@ -1179,7 +1181,6 @@ MonoBehaviour:
   tiempoDeQuemado: 6
   seCocino: 0
   seQuemo: 0
-  presionando: 0
 --- !u!114 &203069833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,6 +1194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 0}
   ActivarasVentana: 0
@@ -1459,6 +1462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 980345316}
   ActivarasVentana: 1
@@ -2080,7 +2085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &593788015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,6 +2181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   objetoAAgarrar: {fileID: 0}
 --- !u!1 &632894948
 GameObject:
@@ -4032,6 +4039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 0}
   ActivarasVentana: 0
@@ -4048,6 +4057,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   cocinaScriptable: {fileID: 11400000, guid: 2fb48c5e866b6bf479a666b17d216f3e, type: 2}
   ventanaDeMinijuego: {fileID: 658953363}
   textoDeAviso: {fileID: 1645520334}
@@ -4087,6 +4098,7 @@ RectTransform:
   - {fileID: 1747515500}
   - {fileID: 2036702124}
   - {fileID: 1758385651}
+  - {fileID: 1734897863}
   m_Father: {fileID: 359165166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6664,6 +6676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 0}
   ActivarasVentana: 0
@@ -6765,6 +6779,198 @@ MonoBehaviour:
   - {fileID: 1997830990}
   - {fileID: 1369240134}
   playerRef: {fileID: 0}
+--- !u!1 &1734897862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734897863}
+  - component: {fileID: 1734897866}
+  - component: {fileID: 1734897865}
+  - component: {fileID: 1734897864}
+  m_Layer: 5
+  m_Name: Pescado (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1734897863
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734897862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5118, y: 2.5118, z: 2.5118}
+  m_Children: []
+  m_Father: {fileID: 980345317}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 663, y: 183}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1734897864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734897862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1734897865}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 951229576}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1756773581}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1289228699}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1369240134}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 980345316}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1515719834}
+        m_TargetAssemblyTypeName: PlayerScripts, Assembly-CSharp
+        m_MethodName: DesableHud
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1734897865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734897862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4339623, g: 0.34143826, b: 0.38256836, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1734897866
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734897862}
+  m_CullTransparentMesh: 1
 --- !u!1 &1747515499
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,6 +7442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   cocinaScriptable: {fileID: 11400000, guid: 71dbede00b6017749b6eec9b34a131a9, type: 2}
   ventanaDeMinijuego: {fileID: 658953363}
   textoDeAviso: {fileID: 1645520334}
@@ -7253,6 +7461,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 0}
   ActivarasVentana: 0
@@ -7469,8 +7679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23220834, y: 0.61037034}
   m_AnchorMax: {x: 0.23220834, y: 0.61037034}
-  m_AnchoredPosition: {x: 10.4073, y: -11.037}
-  m_SizeDelta: {x: 1995.1521, y: 1079.3638}
+  m_AnchoredPosition: {x: 11.8427, y: -11.037}
+  m_SizeDelta: {x: 1998.0227, y: 1079.3638}
   m_Pivot: {x: 0.49999994, y: 0.50000024}
 --- !u!114 &1837281378
 MonoBehaviour:
@@ -7950,7 +8160,7 @@ GameObject:
   - component: {fileID: 2028669990}
   - component: {fileID: 2028669989}
   m_Layer: 0
-  m_Name: Estufa (1)
+  m_Name: Entregadero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7980,14 +8190,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2028669987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28bfc52b6b1882944a9d86ddbf386718, type: 3}
+  m_Script: {fileID: 11500000, guid: 09e6cb1cd5b0e134caaac2de6fcf0e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  cocinaScriptable: {fileID: 11400000, guid: 2fb48c5e866b6bf479a666b17d216f3e, type: 2}
-  ventanaDeMinijuego: {fileID: 658953363}
-  textoDeAviso: {fileID: 1645520334}
-  ventanDeAviso: {fileID: 1053474677}
+  presionando: 0
+  objectsToClean:
+  - {fileID: 1055041117}
+  - {fileID: 1210906738}
+  - {fileID: 130986551}
+  - {fileID: 1747515499}
+  VegetalesParaElPlatillo:
+  - Papa
+  cuentaDeVegetales: 0
+  comprobadorDeVegetales: 00
 --- !u!114 &2028669990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8001,6 +8217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
+  presionando: 0
+  objectsToClean: []
   outlineRef: {fileID: 0}
   ventana2D: {fileID: 0}
   ActivarasVentana: 0
@@ -8017,7 +8235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 1
-  outlineColor: {r: 1, g: 0.80725145, b: 0, a: 1}
+  outlineColor: {r: 0, g: 1, b: 0.12117076, a: 1}
   outlineWidth: 3.92
   precomputeOutline: 0
   bakeKeys: []
@@ -8054,7 +8272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a22d0dea22dfd0c419f31419c5a6ec63, type: 2}
+  - {fileID: 2100000, guid: 1c70bcb1beb4a55428fe27193570bb76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

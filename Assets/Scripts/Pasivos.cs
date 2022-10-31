@@ -13,7 +13,7 @@ public class Pasivos : ObjetoInteractuable
     public MeshRenderer colorDelAlimento;
     public float tiempoDeCocinado, tiempoDeQuemado;
     public bool seCocino, seQuemo;
-    public bool presionando;
+ 
     private void Update()
     {
         if(SeEntrego)
@@ -112,17 +112,5 @@ public class Pasivos : ObjetoInteractuable
     {
         timer = 0;
     }
-    public void _Inputs()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            presionando = true;
-            Debug.Log("presionando");
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            presionando = false;
-            Debug.Log("despresionando");
-        }
-    }
+
 }
