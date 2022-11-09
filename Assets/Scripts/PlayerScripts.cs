@@ -51,13 +51,13 @@ public class PlayerScripts : MonoBehaviour
     #region Player Function
     void PlayerController()
     {
+      
         if (playerData.isPlaying2D == false)
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
-            Vector3 movementDirection = new Vector3(horizontalInput * playerData.speed * Time.deltaTime, rb.velocity.y, verticalInput * playerData.speed * Time.deltaTime);
-            // movementDirection.Normalize();
-            rb.velocity = movementDirection;
+            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput  );
+            transform.Translate(movementDirection * playerData.speed * Time.deltaTime, Space.World);
             if (movementDirection != Vector3.zero)
             {
                 Quaternion toRotarion = Quaternion.LookRotation(movementDirection, Vector3.up);

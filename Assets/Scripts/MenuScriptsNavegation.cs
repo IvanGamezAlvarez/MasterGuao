@@ -23,5 +23,10 @@ public class MenuScriptsNavegation : MonoBehaviour
     {
         SceneManager.LoadScene(sceneThisLevel);
     }
+    public void CerrarJuego()
+    {
+        Application.Quit();
+    }
+
 
 }
