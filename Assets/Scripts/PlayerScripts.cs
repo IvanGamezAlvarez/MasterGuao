@@ -15,6 +15,7 @@ public class PlayerScripts : MonoBehaviour
     }
     [Header("Reeferencias")]
     public Rigidbody rb;
+    public Animator animatorRef;
     public PlayerData playerData;
     [Header("Efectos y Eventos")]
     public float time;
@@ -32,6 +33,7 @@ public class PlayerScripts : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animatorRef = GetComponent<Animator>();
     }
 
     private void Update()
@@ -46,9 +48,27 @@ public class PlayerScripts : MonoBehaviour
         }
     
     }
+    private void LateUpdate()
+    {
+
+        AnimationPlayer();
+    }
     #endregion
 
     #region Player Function
+    public void AnimationPlayer()
+    {
+        if(rb.velocity != Vector3.zero)
+        {
+            animatorRef.SetBool("Moving", true);
+        }
+        else
+        {
+            animatorRef.SetBool("Moving", false) ;
+
+        }
+
+    }
     void PlayerController()
     {
       
