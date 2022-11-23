@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveles.unity
     guid: 7d97a31ae9b452b4cb09b70477259730
   - enabled: 1
+    path: Assets/Scenes/ComicEspala.unity
+    guid: 2f908dd2ee7f38744af34f7541f89245
+  - enabled: 1
     path: "Assets/Scenes/Espa\xF1a.unity"
     guid: 4709189f342aa7b48b1fabbb2d877031
   m_configObjects:
