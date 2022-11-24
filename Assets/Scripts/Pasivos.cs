@@ -13,6 +13,7 @@ public class Pasivos : ObjetoInteractuable
     public MeshRenderer colorDelAlimento;
     public float tiempoDeCocinado, tiempoDeQuemado;
     public bool seCocino, seQuemo;
+    public string tagToInsert;
  
     private void Update()
     {
@@ -59,7 +60,7 @@ public class Pasivos : ObjetoInteractuable
             contenido.SetActive(false);
             if (seCocino)
             {
-                playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.tag = "Cooked";
+                playerReference.transform.Find(cocinaScriptable.vegetalesAceptados).gameObject.tag = tagToInsert;
                 colorDelAlimento.material.color = Color.white;
             }
             if (seQuemo)

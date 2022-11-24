@@ -71,14 +71,14 @@ public class PlayerScripts : MonoBehaviour
     }
     void PlayerController()
     {
-      
+
         if (playerData.isPlaying2D == false)
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
-            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput  );
-            transform.Translate(movementDirection * playerData.speed * Time.deltaTime, Space.World);
-            if (movementDirection != Vector3.zero)
+            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+            rb.velocity = new Vector3(horizontalInput *Time.deltaTime*playerData.speed, rb.velocity.y, verticalInput * Time.deltaTime * playerData.speed) ;
+            if (rb.velocity != Vector3.zero)
             {
                 Quaternion toRotarion = Quaternion.LookRotation(movementDirection, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotarion, playerData.speedRotation * Time.deltaTime);

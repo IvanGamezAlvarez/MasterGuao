@@ -8,6 +8,7 @@ public class SistemaJuego : MonoBehaviour
     public float timeOfMatch;
     public Image ImagenDeTiempo;
     public bool gameStarted;
+    public GameObject ventanaPerdiste;
     void Awake()
     {
         ImagenDeTiempo = GetComponent<Image>();
@@ -26,6 +27,10 @@ public class SistemaJuego : MonoBehaviour
     {
         
         ImagenDeTiempo.fillAmount -= 1.0f/timeOfMatch * Time.deltaTime; 
+        if (ImagenDeTiempo.fillAmount <= 0)
+        {
+            ventanaPerdiste.SetActive(true);
+        }
 
     }
     public void StartGame()

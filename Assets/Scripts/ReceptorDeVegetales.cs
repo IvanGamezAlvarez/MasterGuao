@@ -9,6 +9,8 @@ public class ReceptorDeVegetales : ObjetoInteractuable
     public int cuentaDeVegetales;
     [Header ("Pondremos El Mismo Numero De bools que de Vegetales en el Platillo")]
     public bool[] comprobadorDeVegetales;
+    public int puntos;
+    public GameObject VentanaVictoria;
     void Start()
     {
         
@@ -18,6 +20,7 @@ public class ReceptorDeVegetales : ObjetoInteractuable
     void Update()
     {
         _Inputs();
+        Ganar();
     }
     public void VegetalesAceptados()
     {
@@ -31,15 +34,23 @@ public class ReceptorDeVegetales : ObjetoInteractuable
           
             for (int i = 0; i < VegetalesParaElPlatillo.Length; i++)
             {
-                if (VegetalesParaElPlatillo[i] == other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.name && other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.activeSelf == true && other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.tag == "Cooked")
+                if (VegetalesParaElPlatillo[i] == other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.name && other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.activeSelf == true && other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.tag == "Goal")
                 {
                     Debug.Log($"tienes {VegetalesParaElPlatillo[i]}");
                     comprobadorDeVegetales[i] = true;
+                    puntos++;
                     other.transform.Find(VegetalesParaElPlatillo[i]).gameObject.SetActive(false);
                     Cleaning(alimentoALimpiar);
 
                 }
             }
+        }
+    }
+    void Ganar()
+    {
+        if  ( puntos == comprobadorDeVegetales.Length)
+        {
+            VentanaVictoria.SetActive(true);
         }
     }
 }
