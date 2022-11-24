@@ -8,6 +8,8 @@ TagManager:
   - Burn
   - Cooked
   - Cleaner
+  - Goal
+  - Esponja
   layers:
   - Default
   - TransparentFX
